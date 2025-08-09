@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Events</title>
+ <link rel="stylesheet" href="style.css">
+     
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+      <link href="https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap" rel="stylesheet">
+    <style>
+  
+header {
+  position: relative; /* or fixed if navbar is fixed */
+  z-index: 10; /* high enough to be above overlay */
+  background-color: rgba(255, 255, 255, 0.95); /* or your navbar background */
+  /* add any other styling */
+}
+.overlay {
+  position: absolute; /* or relative depending on your layout */
+  top: 60px; /* height of navbar, adjust if fixed */
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(219, 216, 219, 0.5);
+  z-index: 1; /* behind navbar */
+}
+
+ .banner1 {
+      position: relative;
+      width: 90%;
+      height: 100vh;
+      background: url('images/hLID.jpeg') no-repeat center center/cover;
+ 
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 50px;
+      color: white;
+      z-index: -1;
+    }
+    .right{
+        margin-right: -100px;
+    }
+    .banner1-text {
+      max-width: 400px;
+      font-family: 'Poppins', cursive;
+      font-size: 2.5rem;
+      font-weight: bolder;
+      line-height: 1.2;
+      color: white;
+    }
+
+    .banner1-text p {
+        font-weight: bold; font-size: 2rem; line-height: 1.2;
+    margin-bottom: 10px;
+      font-family: 'Poppins', sans-serif; 
+      color: white;
+      text-align: justify;
+    }
+    
+    .Form-Group {
+      width: 100%;
+      margin-bottom: 15px;
+    }
+
+ 
+
+    .Form-Group input {
+      width: 500px;
+      padding: 12px;
+      border: none;
+      border-radius: 25px;
+      background: white;
+      color: black;
+      font-weight: bold;
+      font-size: 20px;
+      font-family:'Poppins',cursive;
+    }
+
+
+   
+
+    .btn:hover {
+      background: #37474f;
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        max-width: 400px;
+      }
+
+      .left, .right {
+        padding: 30px 20px;
+      }
+
+      .left img {
+        width: 100px;
+      }
+    }
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  max-width: 1200px;
+  margin: auto;
+  padding: 10px;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+   position: relative;
+  
+}
+.image-item {
+    width: 350px;
+    height: auto;
+  overflow: hidden;
+  border-radius: 25px;
+  background: white;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  transition: box-shadow 0.3s ease;
+  cursor: pointer;
+  text-align: center;
+
+  object-fit: cover;
+}
+
+.image-item:hover {
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+
+.image-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+
+.image-item:hover img {
+  transform: scale(1.05);
+}
+
+.caption {
+  margin-top: 8px;
+  font-size: 1rem;
+  color: #333;
+  font-weight: 600;
+  text-align: center;
+}
+.tooltip-content {
+  position: absolute;
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Fine-tune centering */
+  background-color: rgba(243, 195, 235, 0.7); /* Example background with opacity */
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out; /* Smooth transition */
+  z-index: 1; /* Ensure it appears above other content */
+  /* Add styling for text within the tooltip as needed */
+}
+
+.item:hover .tooltip-content {
+  visibility: visible;
+  opacity: 1;
+}
+.tooltip-content a{
+    text-decoration: none;
+    color: black;
+    font-family: 'Poppins',cursive;
+    font-size: 20px;
+}
+/* Tablet: 2 columns */
+@media (max-width: 1024px) {
+  .image-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto; /* rows adjust automatically */
+  }
+}
+
+/* Mobile: 1 column */
+@media (max-width: 767px) {
+  .image-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+}
+    </style>
+</head>
+<body>
+    <header>
+  <nav class="navbar">
+    <!-- Logo -->
+    <div class="logo">
+      <img src="images/127652_21325353_3672331_4533acb9_image.jpg" alt="Logo">
+      <div class="logo-text">
+        FUNNER
+        <span>EVENTS</span>
+      </div>
+    </div>
+
+    <!-- Hamburger menu -->
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <!-- Navigation Links -->
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="events.html">Events</a>
+      <a href="about.html" class="active">About Us</a>
+      <a href="vendor.html">Become a Vendor</a>
+      <a href="contact.html">Contact Us</a>
+    </div>
+
+    <!-- Search & User Icon -->
+    <div class="nav-actions">
+      <div class="search-box">
+        <input type="text" placeholder="Search">
+        <i class="fas fa-search"></i>
+      </div>
+      <a href="login.html" class="user-icon">
+        <i class="fas fa-user-circle"></i>
+      </a>
+    </div>
+  </nav>
+</header>
+<section class="banner1">
+    <div class="banner1-text">
+      <div class="left">
+     
+      
+      
+      <p>YOUR PERFECT<br>WEDDING,<Br>METICULOUSLU<br>PLANNED AND<br><span style="color: red; font-weight: bold; font-size: 2rem; line-height: 1.2;">
+  BEAUTIFULLY<br>
+  EXECUTED
+</span></p>
+      
+    </div>
+    </div>
+
+    <div class="right">
+      
+      <form id="loginForm">
+        <div class="Form-Group">
+         <input type="text" id="username" placeholder="Name"/>
+        </div><br>
+         <div class="Form-Group">
+         <input type="email" id="email" placeholder="Email"/>
+        </div><br>
+        <div class="Form-Group">
+         <input type="phonenumber" id="phonenumber" placeholder="Mobile No"/>
+        </div><br>
+        <div class="Form-Group">
+         <input type="text" id="wedding event" placeholder="Wedding Event"/>
+        </div><br>
+        <div class="Form-Group">
+         <input type="text" id="wedding event" placeholder="Select Number of Attendees        🔽"/>
+        </div><br>
+       
+        <div class="form-Group captcha-group">
+                    <input type="checkbox" id="not-robot" name="notRobot" required>
+                    <label for="not-robot">I Am Not a Robot</label><br><br>
+                    
+                    <div class="recaptcha-placeholder"><img src="images/download.png"alt="reCAPTCHA" width="50px"/></div>
+                </div>
+        <button type="submit" class="btn" style="background-color:#3d0a34;border-radius: 25px;
+      cursor: pointer;font-size: 15px; width: 100%; padding: 12px;">Get a Free Consultation</button>
+        
+      </form>
+    </div>
+</div>
+
+</section><br><br>
+
+<section>
+ <h2 style="color: #3d0a34;text-align: center;"> Our Offering</h2>
+<div class="image-grid">
+    <div class="item">
+  <div class="image-item">
+    <img src="images/istockphoto-1340256496-612x612.jpg" alt="Image 1" />
+     
+   </div>
+   <p class="caption">Wedding Planner</p>
+</div>
+  <div class="item">
+  <div class="image-item">
+    <img src="images/koncepts-01.jpg" alt="Image 2" />
+   
+  </div>
+   <p class="caption">Wedding Decor</p>
+  </div>
+  <div class="item">
+  <div class="image-item">
+    <img src="images/festal-events-h-thumb.jpg" alt="Image 3" />
+    
+  </div>
+   <p class="caption">Hospitality</p>
+  </div>
+  <div class="item">
+  <div class="image-item">
+    <img src="images/3(1).jpg" alt="Image 4" />
+ 
+  </div>
+  <p class="caption">Logistics</p>
+  </div>
+  <div class="item">
+  <div class="image-item">
+    <img src="images/wedding-videography-services-1505984902-3342095.jpeg" alt="Image 5" />
+ 
+  </div>
+  <p class="caption">Photography & Videography</p>
+</div>
+  <div class="item">
+  <div class="image-item">
+    <img src="images/2(1).jpg" alt="Image 6" />
+ 
+  </div>
+   <p class="caption">Artist Management</p>
+  </div>
+  <div class="item">
+  <div class="image-item">
+    <img src="images/Types-of-Accommodations-in-Tourism.jpg" alt="Image 7" />
+   
+  </div>
+   <p class="caption">Accommodation</p>
+  </div>
+  
+    <div class="item" >
+  <div class="image-item">
+    <img src="images/download (1).jfif" alt="Image 8" />
+   
+  </div>
+   <p class="caption">Veg & Non Veg Catering</p>
+   <div class="tooltip-content">
+    <p> <a href="vegetarian.html">Vegetarian</a></p>
+    <p><a href="non-vegetarian.html">Non-Veg</a></p>
+  </div>
+  </div>
+   <div class="item">
+  <div class="image-item">
+    <img src="images/dress.jpeg" alt="Image 9" />
+   
+  </div>
+   <p class="caption">Dress</p>
+  </div>
+   <div class="item">
+  <div class="image-item">
+    <img src="images/WEddinglocation.jpeg" alt="Image 10" />
+   
+  </div>
+   <p class="caption">Wedding Location</p>
+  </div>
+   <div class="item">
+  <div class="image-item">
+    <img src="images/product-jpeg.jpg" alt="Image 11" />
+  </div>
+   <p class="caption">Return Gifts</p>
+  </div>
+   <div class="item">
+  <div class="image-item">
+    <img src="images/mehandi.jpeg" alt="Image 12" />
+   
+  </div>
+   <p class="caption">Mehandi& Makeup Artist</p>
+  </div>
+   </div>
+  
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-logo">
+      <img src="images/127652_21325353_3672331_4533acb9_image.jpg" alt="Funner Events Logo">
+    </div>
+
+    <div class="footer-links">
+      <ul>
+        <li>Home</li>
+        <li>Events</li>
+        <li>Become a Vector</li>
+        <li>About Us</li>
+        <li>Contact Us</li>
+      </ul>
+    </div>
+
+    <div class="footer-services">
+      <ul>
+        <li>Our Services</li>
+        <li>Wedding Events</li>
+        <li>Corporate Events</li>
+        <li>Entertainment Events</li>
+        <li>Sports Events</li>
+        <li>All Type Of Family Events</li>
+      </ul>
+    </div>
+<div class="footer-img">
+  <img src="images/25ff8f45e3721afaab7c15cc79e74742(1).jpg" alt="Event Image" > </div>
+    <div class="footer-contact">
+      
+      <p><strong>Contact:</strong></p>
+       <div class="icons">
+      <p> <i class="fas fa-map-marker-alt location-icon"></i> 21, Amman Nagar,<br>RMK Road, Karur-26</p>
+      <p><i class="fas fa-phone"></i> Phone: +921556214566</p>
+      <p><i class="fas fa-envelope"></i> E-mail: Funnerevent.in</p>
+      </div>
+      <p><strong>Get in Touch</strong></p>
+           <div class="social-icons">
+        <img src="images/whatsapp.jpeg" alt="WhatsApp">
+        <img src="images/youtube.jpeg" alt="YouTube">
+        <img src="images/instagram.jpeg" alt="Instagram">
+        <img src="images/facebook.png" alt="Facebook">
+      </div>
+    
+  </div>
+</footer>
+</body>
+</html>

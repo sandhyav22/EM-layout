@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <title>index</title>
+    <link rel="stylesheet" href="style.css">
+     
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+      <link href="https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap" rel="stylesheet">
+    <style>
+          h2 {
+      text-align: center;
+      font-size: 32px;
+      margin-bottom: 30px;
+    }
+
+    .gallery {
+      display: grid;
+      width: 1200px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+      padding: 10px;
+    }
+
+    .gallery img {
+      width: 100%;
+     
+      object-fit: cover;
+      
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.03);
+    }
+    .column1{
+      display: grid;
+      width: 300px;
+    justify-content: center;
+    }
+    .column1 img{
+      width: 300px;
+      height: 805px;
+      object-fit: cover;
+    }
+ .column2 {
+  display: grid;
+  gap: 10px; /* Works with grid too */
+  width: 200px;
+  height: 800px;
+}
+
+.column2 img {
+  width: 200px;
+  height: 263px;
+  object-fit: cover;
+}
+.column3{
+  display: grid;
+    width: 500px;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
+}
+
+.item {
+    overflow: hidden;
+   
+  }
+
+  .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    
+  }
+
+  /* === Desktop Layout (exact like screenshot) === */
+  .wide {
+   margin-top: -20px;
+   margin-left: 50px;
+    width: 490px;
+    height: 300px;
+  }
+  .tall {
+   margin-top: -310px;
+   margin-left: 550px;
+    width: 210px;
+    height: 460px;
+    
+  }
+  .medium {
+    margin-left: 50px;
+    margin-top: -150px;
+   
+    width: 300px;
+    height: 490px;
+  }
+  .small {
+    margin-top: -500px;
+  margin-left: 360px;
+    width: 180px;
+    height: 145px;
+    
+  }
+  .wide-bottom {
+    
+  margin-top: -350px;
+  margin-left: 360px;
+    width: 400px;
+    height: 330px;
+  }
+
+  @media (max-width: 1024px) {
+  .gallery {
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .column1, .column2, .column3 {
+    width: 100%;
+    height: auto;
+  }
+
+  .column1 img, .column2 img, .column3 img {
+    width: 100%;
+    height: auto;
+  }
+
+  .wide, .tall, .medium, .small, .wide-bottom {
+    margin: 0;
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* === Mobile View === */
+@media (max-width: 768px) {
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .column1, .column2, .column3 {
+    width: 100%;
+  }
+
+  .column1 img, .column2 img, .column3 img {
+    width: 100%;
+    height: auto;
+  }
+
+  .wide, .tall, .medium, .small, .wide-bottom {
+    width: 100%;
+    height: auto;
+    margin: 0;
+  }
+}
+    </style>
+</head>
+<body>
+  <nav class="navbar">
+    <!-- Logo -->
+    <div class="logo">
+      <img src="images/127652_21325353_3672331_4533acb9_image.jpg" alt="Logo">
+      <div class="logo-text">
+        FUNNER
+        <span>EVENTS</span>
+      </div>
+    </div>
+
+    <!-- Hamburger menu -->
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <!-- Navigation Links -->
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="events.html">Events</a>
+      <a href="about.html" class="active">About Us</a>
+      <a href="vendor.html">Become a Vendor</a>
+      <a href="contact.html">Contact Us</a>
+    </div>
+
+    <!-- Search & User Icon -->
+    <div class="nav-actions">
+      <div class="search-box">
+        <input type="text" placeholder="Search">
+        <i class="fas fa-search"></i>
+      </div>
+       <a href="login.html" class="user-icon">
+        <i class="fas fa-user-circle"></i>
+      </a>
+    </div>
+  </nav>
+<br><br><br>
+<section class="banner">
+    <div class="banner-text">
+      <h1>Crafting</h1>
+      <h1>Moments…..</h1>
+      <h1>Creating</h1>
+      <h1>Memories…</h1>
+    </div>
+
+    <a href="#" class="book-button">Book a Call</a>
+  </section>
+<main>
+  <section class="partners-section">
+    <h2>“Crafting Excellence with Our Trusted Partners.”</h2>
+    <div class="partners-grid">
+      <div class="partner-item">
+        <img src="images/beauty.png" alt="Beauty">
+        <p>Beauty</p>
+      </div>
+      <div class="partner-item">
+        <img src="images/saloon.png" alt="Saloon">
+        <p>Saloon</p>
+      </div>
+      <div class="partner-item">
+        <img src="images/catering-service-icon-vector.jpg" alt="Catering">
+        <p>Catering</p>
+      </div>
+      <div class="partner-item">
+        <img src="images/Auto-van-delivery-transport-icon-Graphics-12324493-1.jpg" alt="Transportation">
+        <p>Transportation</p>
+      </div>
+      <div class="partner-item">
+        <img src="images/florist.png" alt="Florist">
+        <p>Florist</p>
+      </div>
+      <div class="partner-item">
+        <img src="images/officiants.png" alt="Officiants">
+        <p>Officiants</p> 
+      </div>
+      
+      </div><br>
+    <div class="partners-grid">
+      <div class="partner-item">
+        <img src="images/rental.png" alt="Rental">
+        <p>Rental</p>
+      </div>
+      <div class="partner-item">
+        <img src="images/venues.png" alt="Venues">
+        <p>Venues</p>
+      </div>
+      <div class="partner-item">
+        <img src="images/photography.png" alt="Photography">
+        <p>Photography</p>
+      </div>
+      <div class="partner-item">
+        <img src="images/jewellery.png" alt="Jewellery">
+        <p>Jewellery</p>
+      </div>
+      <div class="partner-item">
+        <img src="images/cake.png" alt="Cake">
+        <p>Cake</p>
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <h2>Why Work With Funner</h2>
+    <div class="content-wrapper">
+    
+      <div class="column">
+        <div class="box">
+          <h4>Experience That Speaks Volumes</h4>
+          <p>With years of handson experience in managing corporate events, weddings, festivals, and private parties. We know what it takes to turn any vision into a seamless and unforgettable reality.</p>
+        </div>
+        <div class="box">
+          <h4>End-to-End Service</h4>
+          <p>From concept to cleanup, we handle everything. Our all-inclusive event management services cover planning, logistics, vendor coordination, on-site management, and more-so yoou can relax and enjo the moment.</p>
+        </div>
+        <div class="box">
+          <h4>Reliable Team of Professionals</h4>
+          <p>Our team is made up of passionate planners, creative designers, and logistical experts dedicated to executing flawless events. We pride ourselves on professionalism, punctuality, and clear communication.</p>
+        </div>
+      </div>
+
+     
+      <div class="center-images">
+        <div class="oval-image">
+        <img src="images/olympia-1543733_1280-1024x682.jpg" alt="Activity 1" />
+        </div>
+        <img src="images/fe-30.jpg" alt="Activity 2"/>
+      </div>
+
+     
+      <div class="column">
+        <div class="box">
+          <h4>Creative & Customized Solutions</h4>
+          <p>No two events are the same. We work closely with our clients to design tailored experiences that reflect their goals, themes, and budgets-down to the smallest detail.</p>
+        </div>
+        <div class="box">
+          <h4>Proven Track Record</h4>
+          <p>WIth a portfolio of successful events and glowing client testimonials. We've earned a reputation for exceeding expectations and deliverling memorable experiences every time.</p>
+        </div>
+        <div class="box">
+          <h4>Stress-Free Execution</h4>
+          <p>Let us take the pressure off. We manage the chaos behind the scenes, so ou can focus on what mattrs most-your guests and your occasion.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="moments-section">
+    <h2>"Moment That We Create, Where Every Detail Tells a Story</h2>
+    <div class="moments-grid">
+      <div class="moments-item">
+        <img src="images/Locate-Your-Events-Purpose.jpg" alt="CE">
+        <p>Corporate Event</p>
+      </div>
+      <div class="moments-item">
+        <img src="images/download.jfif" alt="WE">
+        <p>Wedding Event</p>
+      </div>
+      <div class="moments-item">
+        <img src="images/579b97bd-39b7-4fa4-8362-fa9908188aa1.jpeg" alt="SE">
+        <p>Sports Event</p>
+      </div>
+      <div class="moments-item">
+        <img src="images/Holi.jpg" alt="RFE">
+        <p>Religious Festival Event</p>
+      </div>
+      </div>
+      <div class="moments-grid">
+      <div class="moments-item">
+        <img src="images/entertainment-event-managment.jpg" alt="EE">
+        <p>Entertainment Event</p>
+      </div>
+      <div class="moments-item">
+        <img src="images/EPN_0539-3-1-e1705934863400.jpg" alt=TE">
+        <p>Technology Event</p>
+      </div>
+      <div class="moments-item">
+        <img src="images/EEXi4tWWwAElRKT.jpg" alt="EBE">
+        <p>Exclusive Ballon Event</p>
+      </div>
+      </div>
+  </section>
+ <section class="professionalism-section">
+    <h2>“Crafting Excellence with Our Trusted Partners.”</h2>
+    <div class="professional-grid">
+      <div class="professional-item">
+        <img src="images/event done.png" alt="ED">
+        <h5>1500+</h5>
+        <p>Event Done</p>
+      </div>
+      <div class="professional-item">
+        <img src="images/happyclients.png" alt="HC">
+         <h5>600+</h5>
+        <p>Happy Clients</p>
+      </div>
+      <div class="professional-item">
+        <img src="images/jewelry-rings-jewelry-icon-isolated-design-illustration-diamond-ring-icon-simple-sign-trendy-and-modern-jewelry-ring-icon-symbols-for-logo-template-website-vector.jpg" alt="WED">
+         <h5>200+</h5>
+        <p>Wedding Event Done</p>
+      </div>
+      <div class="professional-item">
+        <img src="images/images.png" alt="CED">
+         <h5>260+</h5>
+        <p>Corporate Event Done</p>
+      </div>
+      <div class="professional-item">
+        <img src="images/an-inclusive-workplace-employees-protection-filled-outline-icon-illustration-color-editable-eps-10-free-vector.jpg" alt="HE">
+         <h5>100</h5>
+        <p>Happy Employees</p>
+      </div>
+      </div>
+      <section>
+      <h2>"Legacy Of Memorable Moments"</h2>
+
+  <div class="gallery">
+    <div class="column1">
+    <img src="images/c448e921ab604a042908af69124c4c9e.jpg" alt="Hot air balloons">
+    </div>
+    <div class="column2">
+    <img src="images/d172f9a2-1b8f-4bd5-b9b3-df9071817bd6.jpg" alt="Wedding decor">
+    <img src="images/how-to-plan-an-event.jpg" alt="Beach wedding">
+    <img src="images/Corporate-Party.jpg" alt="Corporate Event">
+    </div>
+    <div class="column3">
+      <div class="item wide">
+    <img src="images/copper-events-01.jpg" alt="copper">
+  </div>
+  <div class="item tall">
+   <img src="images/images (1).jfif" alt="temple">
+  </div>
+  <div class="item medium">
+      <img src="images/Corporate-Company-visits-at-sunnys-world-Pune-2.jpg" alt="CC">
+  </div>
+  <div class="item small">
+    <img src="images/soccer.jpeg" alt="Birthday Party">
+  </div>
+  <div class="item wide-bottom">
+    <img src="images/birthday-party-decorations-8.jpg" alt="Birthday Party">
+  </div>
+</div>
+
+
+
+</section>
+
+
+      <div class="Container">
+  <h2>“Voices of Celebration, Powered by Us<br>Because Happy Clients are Our Best Achievement”</h2>
+
+  <div class="flex-row">
+    <div class="card">
+      <img src="images/john.jpeg" alt="John Peter" />
+      <div class="name">John Peter</div>
+      <div class="location">Bangalore, India</div>
+      <div class="quote-title">"Our Dream Wedding Come True"</div>
+      <div class="quote-text">
+       <p> "The team turned our vision into reality. Everything was so seamless— from the décor to the schedule. We didn’t have to worry about a thing!"</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="images/Bernanderr.jpeg" alt="Bernanderr" />
+      <div class="name">Bernanderr</div>
+      <div class="location">Kerala, India</div>
+      <div class="quote-title">"Professional and Reliable"</div>
+      <div class="quote-text">
+       "We’ve worked with several planners before, but this team stands out. Their coordination for our annual gala exceeded expectations."</p> 
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="images/raveena.jpeg" alt="Raveena" />
+      <div class="name">Raveena</div>
+      <div class="location">Chennai, India</div>
+      <div class="quote-title">"Flawless Execution!"</div>
+      <div class="quote-text">
+        <p>"From start to finish, the event was perfectly managed. The attention to detail, professional team, and creative touch made our corporate retreat unforgettable."</p>      
+    </div>
+  </div>
+</div>
+
+
+<h2>"Everything You Need To Know <br>About Funner Events"</h2>
+<div class="faq-container">
+    <div class="faq-item">
+        <div class="faq-question">
+            <h3>Can you work with our budget?</h3>
+            <span class="toggle-icon">+</span>
+        </div>
+        <div class="faq-answer">
+            <p>Yes. We aim to create memorable experiences at various budget levels. During our initial consultation, we'll discuss your budget and suggest options that maximize value.</p>
+        </div>
+    </div>
+    
+    <div class="faq-item">
+        <div class="faq-question">
+            <h3>How far in advance shold I book your services?</h3>
+            <span class="toggle-icon">+</span>
+        </div>
+    </div>
+    <div class="faq-item">
+        <div class="faq-question">
+            <h3>Do you handle vendor coordination?</h3>
+            <span class="toggle-icon">+</span>
+        </div>
+    </div>
+    <div class="faq-item">
+        <div class="faq-question">
+            <h3>Do you offer customizable event packages?</h3>
+            <span class="toggle-icon">+</span>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</main>
+<footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-logo">
+      <img src="images/127652_21325353_3672331_4533acb9_image.jpg" alt="Funner Events Logo">
+    </div>
+
+    <div class="footer-links">
+      <ul>
+        <li>Home</li>
+        <li>Events</li>
+        <li>Become a Vector</li>
+        <li>About Us</li>
+        <li>Contact Us</li>
+      </ul>
+    </div>
+
+    <div class="footer-services">
+      <ul>
+        <li>Our Services</li>
+        <li>Wedding Events</li>
+        <li>Corporate Events</li>
+        <li>Entertainment Events</li>
+        <li>Sports Events</li>
+        <li>All Type Of Family Events</li>
+      </ul>
+    </div>
+<div class="footer-img">
+  <img src="images/25ff8f45e3721afaab7c15cc79e74742(1).jpg" alt="Event Image" > </div>
+    <div class="footer-contact">
+      
+      <p><strong>Contact:</strong></p>
+       <div class="icons">
+      <p> <i class="fas fa-map-marker-alt location-icon"></i> 21, Amman Nagar,<br>RMK Road, Karur-26</p>
+      <p><i class="fas fa-phone"></i> Phone: +921556214566</p>
+      <p><i class="fas fa-envelope"></i> E-mail: Funnerevent.in</p>
+      </div>
+      <p><strong>Get in Touch</strong></p>
+           <div class="social-icons">
+        <img src="images/whatsapp.jpeg" alt="WhatsApp">
+        <img src="images/youtube.jpeg" alt="YouTube">
+        <img src="images/instagram.jpeg" alt="Instagram">
+        <img src="images/facebook.png" alt="Facebook">
+      </div>
+    
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>payment quotation</title>
+ <link rel="stylesheet" href="style.css">
+     
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+      <link href="https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap" rel="stylesheet">
+    <style>
+       .payment-section {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 20px; 
+    padding: 20px;
+    justify-content: center;
+    align-items: flex-start; 
+       }
+.Left-section {
+    display: grid;
+    grid-template-columns:  1fr; 
+    gap: 15px; 
+    max-width: 600px; 
+    flex-grow: 1; 
+}
+.Left-section img {
+    width: 250px;
+    height: 380px; 
+    object-fit: cover; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+.Left-section .ovalshaped-image {
+    border-radius: 50%;
+}
+
+
+.Right-section h1 {
+    color: #3d0a2f;
+    font-size: 2em;
+    margin-bottom: 15px;
+    text-align: center;
+     font-family: 'Poppins',cursive;
+    font-weight: bold;
+}
+
+.Payment-Content p {
+    color: #3d0a2f;
+    font-size: 1.6em;
+    line-height: 1.6;
+    text-align: center;
+    border: 2px solid #3d0a2f;
+    padding: 20px;
+    border-radius: 15px;
+    font-family: 'Poppins',cursive;
+    font-weight: bold;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .payment-section {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .Left-section {
+        grid-template-columns: 1fr; /* Single column for images on small screens */
+    }
+}
+    </style>
+</head>
+<body>
+  <nav class="navbar">
+    <!-- Logo -->
+    <div class="logo">
+      <img src="images/127652_21325353_3672331_4533acb9_image.jpg" alt="Logo">
+      <div class="logo-text">
+        FUNNER
+        <span>EVENTS</span>
+      </div>
+    </div>
+
+    <!-- Hamburger menu -->
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <!-- Navigation Links -->
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="events.html">Events</a>
+      <a href="about.html" class="active">About Us</a>
+      <a href="vendor.html">Become a Vendor</a>
+      <a href="contact.html">Contact Us</a>
+    </div>
+
+    <!-- Search & User Icon -->
+    <div class="nav-actions">
+      <div class="search-box">
+        <input type="text" placeholder="Search">
+        <i class="fas fa-search"></i>
+      </div>
+       <a href="login.html" class="user-icon">
+        <i class="fas fa-user-circle"></i>
+      </a>
+    </div>
+  </nav>
+
+<section class="payment-section">
+
+    <div class="Left-section">
+    
+        <img src="images/5cdaaf821b7aa56db0a8e873a3fdf027.jpg" alt="image1" class="ovalshaped-image"/>
+        <img src="images/happy-young-couple-wedding-portrait-the-bride-tenderly-hugged-the-groom-young-brides-and-grooms-are-tenderly-embracing-while-looking-at-the-camera-wedding-bouquet-spring-wedding-photo.jpg" alt="image2"/>
+        <img src="images/19812F96-E952-4458-AE5D-C8D893A00BFC(1).jpeg" alt="image3" class="ovalshaped-image"/>
+        <img src="images/46aab5ec96d4379141547587212884a9.jpg" alt="image4"/>
+    </div>
+    <div class="Right-section">
+        <h1>Payment Quotation</h1>
+        <div class="Payment-Content">
+            <p>All Amount are Change on Your Way of<br>
+            Selection. It's only Only For Appreciate Amount<br> in the Number of Attendees</p>
+        </div>
+    </div>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-logo">
+      <img src="images/127652_21325353_3672331_4533acb9_image.jpg" alt="Funner Events Logo">
+    </div>
+
+    <div class="footer-links">
+      <ul>
+        <li>Home</li>
+        <li>Events</li>
+        <li>Become a Vector</li>
+        <li>About Us</li>
+        <li>Contact Us</li>
+      </ul>
+    </div>
+
+    <div class="footer-services">
+      <ul>
+        <li>Our Services</li>
+        <li>Wedding Events</li>
+        <li>Corporate Events</li>
+        <li>Entertainment Events</li>
+        <li>Sports Events</li>
+        <li>All Type Of Family Events</li>
+      </ul>
+    </div>
+<div class="footer-img">
+  <img src="images/25ff8f45e3721afaab7c15cc79e74742(1).jpg" alt="Event Image" > </div>
+    <div class="footer-contact">
+      
+      <p><strong>Contact:</strong></p>
+       <div class="icons">
+      <p> <i class="fas fa-map-marker-alt location-icon"></i> 21, Amman Nagar,<br>RMK Road, Karur-26</p>
+      <p><i class="fas fa-phone"></i> Phone: +921556214566</p>
+      <p><i class="fas fa-envelope"></i> E-mail: Funnerevent.in</p>
+      </div>
+      <p><strong>Get in Touch</strong></p>
+           <div class="social-icons">
+        <img src="images/whatsapp.jpeg" alt="WhatsApp">
+        <img src="images/youtube.jpeg" alt="YouTube">
+        <img src="images/instagram.jpeg" alt="Instagram">
+        <img src="images/facebook.png" alt="Facebook">
+      </div>
+    
+  </div>
+</footer>
+
+<script src="script.js"></script>
+
+
+</body>
+</html>

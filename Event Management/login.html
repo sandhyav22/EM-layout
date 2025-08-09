@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>login</title>
+    <link rel="stylesheet" href="style.css">
+     
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+      <link href="https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap" rel="stylesheet">
+    <style>
+      body {
+  background: url('images/feature-16.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+header {
+  position: relative; /* or fixed if navbar fixed */
+  z-index: 10;
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 15px 30px;
+}
+
+/* Overlay covers content below navbar */
+.overlay {
+  position: absolute;
+  top: 60px; /* navbar height */
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(247, 231, 247, 0.5);
+  z-index: 1;
+}
+
+.container2 {
+  position: relative;
+  z-index: 2;
+  padding: 20px 40px;
+}
+
+/* Tablet (768px to 1024px) */
+@media (max-width: 1024px) {
+  header {
+    padding: 12px 20px;
+  }
+
+  .overlay {
+    top: 55px; /* slightly smaller navbar height if needed */
+  }
+
+  .container2 {
+    padding: 15px 30px;
+  }
+}
+
+/* Mobile (up to 767px) */
+@media (max-width: 767px) {
+  header {
+    padding: 10px 15px;
+  }
+
+  .overlay {
+    top: 50px; /* adjust navbar height if mobile navbar is smaller */
+  }
+
+  .container2 {
+    padding: 10px 15px;
+  }
+}
+    </style>
+</head>
+<body>
+    <header>
+  <nav class="navbar">
+    <!-- Logo -->
+    <div class="logo">
+      <img src="images/127652_21325353_3672331_4533acb9_image.jpg" alt="Logo">
+      <div class="logo-text">
+        FUNNER
+        <span>EVENTS</span>
+      </div>
+    </div>
+
+    <!-- Hamburger menu -->
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <!-- Navigation Links -->
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="events.html">Events</a>
+      <a href="about.html" class="active">About Us</a>
+      <a href="vendor.html">Become a Vendor</a>
+      <a href="contact.html">Contact Us</a>
+    </div>
+
+    <!-- Search & User Icon -->
+    <div class="nav-actions">
+      <div class="search-box">
+        <input type="text" placeholder="Search">
+        <i class="fas fa-search"></i>
+      </div>
+      <a href="login.html" class="user-icon">
+        <i class="fas fa-user-circle"></i>
+      </a>
+    </div>
+  </nav>
+</header>
+
+  <div class="overlay">
+     <div class="container2">
+    <div class="left">
+     
+      
+      <h2>Welcome to Funner Events</h2>
+      <p>Good to see you again!<br>Let’s get things done.</p>
+      <img src="images/lock.jpg" alt="User Icon">
+    </div>
+
+    <div class="right">
+      <h3>Log in</h3>
+      <form id="loginForm">
+        <div class="Form-group">
+          <label for="username">User Name</label>
+          <input type="text" id="username" required />
+        </div><br>
+
+        <div class="Form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" required />
+        </div><br>
+
+        <a href="#" class="forgot">Forgot Password</a><br><br>
+
+        <button type="submit" class="btn" style="background-color:#263238;border-radius: 25px;
+      cursor: pointer;font-size: 15px; width: 100%; padding: 12px;">Log in</button>
+        <a class="new-customer" href="#">I am a New Customer</a>
+      </form>
+    </div>
+</div>
+
+
+
+
+     <footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-logo">
+      <img src="images/127652_21325353_3672331_4533acb9_image.jpg" alt="Funner Events Logo">
+    </div>
+
+    <div class="footer-links">
+      <ul>
+        <li>Home</li>
+        <li>Events</li>
+        <li>Become a Vector</li>
+        <li>About Us</li>
+        <li>Contact Us</li>
+      </ul>
+    </div>
+
+    <div class="footer-services">
+      <ul>
+        <li>Our Services</li>
+        <li>Wedding Events</li>
+        <li>Corporate Events</li>
+        <li>Entertainment Events</li>
+        <li>Sports Events</li>
+        <li>All Type Of Family Events</li>
+      </ul>
+    </div>
+<div class="footer-img">
+  <img src="images/25ff8f45e3721afaab7c15cc79e74742(1).jpg" alt="Event Image" > </div>
+    <div class="footer-contact">
+      
+      <p><strong>Contact:</strong></p>
+       <div class="icons">
+      <p> <i class="fas fa-map-marker-alt location-icon"></i> 21, Amman Nagar,<br>RMK Road, Karur-26</p>
+      <p><i class="fas fa-phone"></i> Phone: +921556214566</p>
+      <p><i class="fas fa-envelope"></i> E-mail: Funnerevent.in</p>
+      </div>
+      <p><strong>Get in Touch</strong></p>
+           <div class="social-icons">
+        <img src="images/whatsapp.jpeg" alt="WhatsApp">
+        <img src="images/youtube.jpeg" alt="YouTube">
+        <img src="images/instagram.jpeg" alt="Instagram">
+        <img src="images/facebook.png" alt="Facebook">
+      </div>
+    
+  </div>
+</footer>
+</div>
+     <script src="script.js"></script>
+</body>
+</html>

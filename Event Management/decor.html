@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Decor</title>
+
+<link rel="stylesheet" href="style.css">
+     
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+<link href="https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap" rel="stylesheet">
+    <style>
+  .decor-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    padding: 20px;
+  }
+  .decor-card {
+    background-color: #f2e3ec; /* light lavender */
+    border-radius: 20px;
+    padding: 20px;
+    width: 500px; 
+    height: 500px;
+    margin: auto;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.decor-img {
+    width: 100%;
+    height: auto;
+    border-top-right-radius: 60px;
+    border-bottom-right-radius: 60px;
+    object-fit: cover;
+}
+
+.decor-details h3 {
+    color: #3d0a3d;
+    font-size: 1.3rem;
+    margin: 15px 0 10px;
+    font-family: 'Poppins',cursive;
+}
+
+.decor-details p {
+    color: #3d0a3d;
+    font-size: 1rem;
+    margin: 5px 0;
+    font-family: 'Poppins',cursive;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .decor-card {
+        max-width: 90%;
+        padding: 15px;
+    }
+
+    .decor-details h3 {
+        font-size: 1.1rem;
+    }
+
+    .decor-details p {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .decor-card {
+        padding: 10px;
+    }
+
+    .decor-details h3 {
+        font-size: 1rem;
+    }
+
+    .decor-details p {
+        font-size: 0.9rem;
+    }
+}
+
+</style>
+</head>
+<body>
+  <nav class="navbar">
+    <!-- Logo -->
+    <div class="logo">
+      <img src="images/127652_21325353_3672331_4533acb9_image.jpg" alt="Logo">
+      <div class="logo-text">
+        FUNNER
+        <span>EVENTS</span>
+      </div>
+    </div>
+
+    <!-- Hamburger menu -->
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <!-- Navigation Links -->
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="events.html">Events</a>
+      <a href="about.html" class="active">About Us</a>
+      <a href="vendor.html">Become a Vendor</a>
+      <a href="contact.html">Contact Us</a>
+    </div>
+
+    <!-- Search & User Icon -->
+    <div class="nav-actions">
+      <div class="search-box">
+        <input type="text" placeholder="Search">
+        <i class="fas fa-search"></i>
+      </div>
+      <a href="login.html" class="user-icon">
+        <i class="fas fa-user-circle"></i>
+      </a>
+    </div>
+  </nav>
+
+
+  <h1 style="color: #3d0a3d;text-align: center;font-family: 'Poppins',cursive; font-size: 40px;">Our Wedding Decor Models</h1>
+  <h2 style="color: #3d0a3d;text-align: center;font-family: 'Poppins',cursive; font-size: 36px;"> Outdoor Decor Models </h2>
+ <div class="decor-container">
+<div class="decor-card">
+    <img src="images/Srinidhi-Rishi-Taj+Fishermans+Cove-0830.jpg" alt="Beach Wedding" class="decor-img">
+
+    <div class="decor-details">
+        <h3>Beach Wedding Fully Clothed</h3>  
+        <p><strong>Code :</strong> BW885</p>
+        <p><strong>Price :</strong> 30,000</p>
+    </div>
+</div>
+<div class="decor-card">
+    <img src="images/wedding-decor-mandap-italy.jpg" alt="Beach Wedding" class="decor-img">
+
+    <div class="decor-details">
+        <h3>Venue Wedding Minimalied Decor</h3>
+        <p><strong>Code :</strong> BW886</p>
+        <p><strong>Price :</strong> 10,000</p>
+    </div>
+</div>
+<div class="decor-card">
+    <img src="images/280853361_384119363729222_2297653372056721864_n(1).jpg" alt="Beach Wedding" class="decor-img">
+
+    <div class="decor-details">
+        <h3>Beach Venue Haldi Minimalized Decor</h3>
+        <p><strong>Code :</strong> BW887</p>
+        <p><strong>Price :</strong> 10,000</p>
+    </div>
+</div>
+<div class="decor-card">
+    <img src="images/venue haldi.jpeg" alt="Beach Wedding" class="decor-img">
+
+    <div class="decor-details">
+        <h3>Venue Wedding Haldi Decor</h3>
+        <p><strong>Code :</strong> BW888</p>
+        <p><strong>Price :</strong> 13,000</p>
+    </div>
+</div>
+<div class="decor-card">
+    <img src="images/aakar-events-thumb-700x452.jpg" alt="Beach Wedding" class="decor-img">
+
+    <div class="decor-details">
+        <h3>Beach Venue Golden Decor</h3>
+        <p><strong>Code :</strong> BW827</p>
+        <p><strong>Price :</strong> 25,000</p>
+    </div>
+</div>
+<div class="decor-card">
+    <img src="images/WD_21-1.jpg" alt="Beach Wedding" class="decor-img">
+
+    <div class="decor-details">
+        <h3>Venue Wedding Reception Decor</h3>
+        <p><strong>Code :</strong> BW898</p>
+        <p><strong>Price :</strong> 18,000</p>
+    </div>
+</div>
+</div>
+
+  <h2 style="color: #3d0a3d;text-align: center;font-family: 'Poppins',cursive; font-size: 36px;"> Indoor Decor Models </h2>
+ <div class="decor-container">
+<div class="decor-card">
+    <img src="images/1520184378816(1).jfif" alt="Beach Wedding" class="decor-img">
+
+    <div class="decor-details">
+        <h3>Royal Look Decor</h3>  
+        <p><strong>Code :</strong> BW885</p>
+        <p><strong>Price :</strong> 30,000</p>
+    </div>
+</div>
+<div class="decor-card">
+    <img src="images/e438f51bbbfb00cd340789e2159e592d.jpg" alt="Beach Wedding" class="decor-img">
+
+    <div class="decor-details">
+        <h3>Temple Theme Mugurtham Decor</h3>
+        <p><strong>Code :</strong> BW886</p>
+        <p><strong>Price :</strong> 40,000</p>
+    </div>
+</div>
+<div class="decor-card">
+    <img src="images/fe.jpg" alt="Beach Wedding" class="decor-img">
+
+    <div class="decor-details">
+        <h3>Beach Indoor Haldi Minimalized Decor</h3>
+        <p><strong>Code :</strong> BW887</p>
+        <p><strong>Price :</strong> 15,000</p>
+    </div>
+</div>
+<div class="decor-card">
+    <img src="images/Sri-Lanka-Wedding-Decorations.jpg" alt="Beach Wedding" class="decor-img">
+
+    <div class="decor-details">
+        <h3>Rich Look Wedding Decor</h3>
+        <p><strong>Code :</strong> BW888</p>
+        <p><strong>Price :</strong> 29,000</p>
+    </div>
+</div>
+<div class="decor-card">
+    <img src="images/flowerdecor.jpeg" alt="Beach Wedding" class="decor-img">
+
+    <div class="decor-details">
+        <h3>Fully Original Flower Decor</h3>
+        <p><strong>Code :</strong> BW827</p>
+        <p><strong>Price :</strong> 45,000</p>
+    </div>
+</div>
+<div class="decor-card">
+    <img src="images/traditional.jpg" alt="Beach Wedding" class="decor-img">
+
+    <div class="decor-details">
+        <h3>Traditional Wedding Decor</h3>
+        <p><strong>Code :</strong> BW898</p>
+        <p><strong>Price :</strong> 18,000</p>
+    </div>
+</div>
+</div>
+
+
+<br><br>
+
+
+
+<footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-logo">
+      <img src="images/127652_21325353_3672331_4533acb9_image.jpg" alt="Funner Events Logo">
+    </div>
+
+    <div class="footer-links">
+      <ul>
+        <li>Home</li>
+        <li>Events</li>
+        <li>Become a Vector</li>
+        <li>About Us</li>
+        <li>Contact Us</li>
+      </ul>
+    </div>
+
+    <div class="footer-services">
+      <ul>
+        <li>Our Services</li>
+        <li>Wedding Events</li>
+        <li>Corporate Events</li>
+        <li>Entertainment Events</li>
+        <li>Sports Events</li>
+        <li>All Type Of Family Events</li>
+      </ul>
+    </div>
+<div class="footer-img">
+  <img src="images/25ff8f45e3721afaab7c15cc79e74742(1).jpg" alt="Event Image" > </div>
+    <div class="footer-contact">
+      
+      <p><strong>Contact:</strong></p>
+       <div class="icons">
+      <p> <i class="fas fa-map-marker-alt location-icon"></i> 21, Amman Nagar,<br>RMK Road, Karur-26</p>
+      <p><i class="fas fa-phone"></i> Phone: +921556214566</p>
+      <p><i class="fas fa-envelope"></i> E-mail: Funnerevent.in</p>
+      </div>
+      <p><strong>Get in Touch</strong></p>
+           <div class="social-icons">
+        <img src="images/whatsapp.jpeg" alt="WhatsApp">
+        <img src="images/youtube.jpeg" alt="YouTube">
+        <img src="images/instagram.jpeg" alt="Instagram">
+        <img src="images/facebook.png" alt="Facebook">
+      </div>
+    
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>events</title>
+    <link rel="stylesheet" href="style.css">
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap" rel="stylesheet">
+    <style>
+      .image-container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 100px;
+        padding: 30px;
+        width: 100%;
+      }
+        .image-card {
+      background-color: #e7d4e7;
+      border-radius: 20px;
+      box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+      overflow: hidden;
+      text-align: center;
+      padding: 20px;
+      width: 450px;
+      transition: transform 0.3s ease;
+       cursor: pointer;
+    }
+
+    .image-card:hover {
+      transform: scale(1.05);
+    }
+
+    .image-card img {
+      width: 100%;
+      height: 300px;
+      border-radius: 15px;
+     clip-path:  ellipse(49% 48% at 50% 50%);
+    }
+
+    .image-card h3 {
+      margin-top: 15px;
+      font-size: 22px;
+      color: #3d0a34;
+      font-weight: 700;
+    }
+    .image-card-link {
+    text-decoration: none; /* Remove underline */
+    color: inherit;        /* Keep text color unchanged */
+    display: inline-block; /* Keeps it in card form */
+}
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .image-card {
+        max-width: 300px;
+        padding: 15px;
+      }
+
+      .image-card h3 {
+        font-size: 20px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .image-card {
+        max-width: 260px;
+        padding: 10px;
+      }
+
+      .image-card h3 {
+        font-size: 18px;
+      }
+    }
+    </style>
+</head>
+<body>
+  <nav class="navbar">
+    <!-- Logo -->
+    <div class="logo">
+      <img src="images/127652_21325353_3672331_4533acb9_image.jpg" alt="Logo">
+      <div class="logo-text">
+        FUNNER
+        <span>EVENTS</span>
+      </div>
+    </div>
+
+    <!-- Hamburger menu -->
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <!-- Navigation Links -->
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="events.html">Events</a>
+      <a href="about.html" class="active">About Us</a>
+      <a href="vendor.html">Become a Vendor</a>
+      <a href="contact.html">Contact Us</a>
+    </div>
+
+    <!-- Search & User Icon -->
+    <div class="nav-actions">
+      <div class="search-box">
+        <input type="text" placeholder="Search">
+        <i class="fas fa-search"></i>
+      </div>
+      <a href="login.html" class="user-icon">
+        <i class="fas fa-user-circle"></i>
+      </a>
+    </div>
+  </nav>
+  <section>
+    <h1>Our Events</h1><br><br>
+    <p class="style"; style="font-size: 20px;color:rgb(199, 20, 20)">" An Event is not over untill everyone stops talking about it."</p>
+
+  </section><br><br>
+  <main>
+    <div class="image-container">
+    <div class="image-card">
+    <img src="images/sport.jpeg" alt="Sports Events">
+    <h3>Sports Events</h3>
+    
+  </div>
+
+  
+  <div class="image-card">
+    <img src="images/photo_2024-10-17_23-30-47-720x575.jpg" alt="Birthday Events">
+    <h3>Birthday Events</h3>
+    
+  </div>
+  <div class="image-card">
+    <img src="images/A2D2.jpg" alt="Entertainment Events">
+    <h3>Entertainment Events</h3>
+    
+  </div>
+  <a href="weddingevents.html" class="image-card-link">
+  <div class="image-card">
+      <img src="images/wed.jpg" alt="Wedding Events">
+      <h3>Wedding Events</h3>
+  </div>
+</a>
+  <div class="image-card">
+    <img src="images/corporate-event-header.jpg" alt="Corporate Events">
+    <h3>Corporate Events</h3>
+    
+  </div>
+  <div class="image-card">
+    <img src="images/20687115616_f6a4ee38be_o(1).jpg" alt="Religious festival Events">
+    <h3>Religious Festival  Events</h3>
+    
+  </div>
+  </div>
+  <div class="image-container">
+  <div class="image-card">
+    <img src="images/festival.jpg" alt="Sports Events">
+    <h3>All Type of Religious & Family Events</h3>
+    
+  </div>
+</div>
+</main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-logo">
+      <img src="images/127652_21325353_3672331_4533acb9_image.jpg" alt="Funner Events Logo">
+    </div>
+
+    <div class="footer-links">
+      <ul>
+        <li>Home</li>
+        <li>Events</li>
+        <li>Become a Vector</li>
+        <li>About Us</li>
+        <li>Contact Us</li>
+      </ul>
+    </div>
+
+    <div class="footer-services">
+      <ul>
+        <li>Our Services</li>
+        <li>Wedding Events</li>
+        <li>Corporate Events</li>
+        <li>Entertainment Events</li>
+        <li>Sports Events</li>
+        <li>All Type Of Family Events</li>
+      </ul>
+    </div>
+<div class="footer-img">
+  <img src="images/25ff8f45e3721afaab7c15cc79e74742(1).jpg" alt="Event Image" > </div>
+    <div class="footer-contact">
+      
+      <p><strong>Contact:</strong></p>
+       <div class="icons">
+      <p> <i class="fas fa-map-marker-alt location-icon"></i> 21, Amman Nagar,<br>RMK Road, Karur-26</p>
+      <p><i class="fas fa-phone"></i> Phone: +921556214566</p>
+      <p><i class="fas fa-envelope"></i> E-mail: Funnerevent.in</p>
+      </div>
+      <p><strong>Get in Touch</strong></p>
+           <div class="social-icons">
+        <img src="images/whatsapp.jpeg" alt="WhatsApp">
+        <img src="images/youtube.jpeg" alt="YouTube">
+        <img src="images/instagram.jpeg" alt="Instagram">
+        <img src="images/facebook.png" alt="Facebook">
+      </div>
+    
+  </div>
+</footer>
+
+</body>
+</html>

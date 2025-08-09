@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Food Card</title>
+
+<link rel="stylesheet" href="style.css">
+     
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+      <link href="https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap" rel="stylesheet">
+    <style>
+   .food-container {
+        font-family: Arial, sans-serif;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        gap: 20px;
+        
+    }
+
+    .food-card {
+      width: 500px;
+      height: 800px;
+        background: #f5e6ef;
+        border-radius: 15px;
+        padding: 15px;
+        max-width: 800px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        gap: 20px;
+    }
+
+    .food-card h2 {
+        text-align: center;
+        font-size: 1.6rem;
+        margin-bottom: 15px;
+        color: #4b143d;
+        font-family: 'Poppins',cursive;
+    }
+
+    .food-section {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 25px;
+    }
+
+    .food-row {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .food-img {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    .food-img img {
+        width: 100px;
+        height: 100px;
+        border-radius: 10px;
+        object-fit: cover;
+    }
+
+    .food-text {
+        flex: 1;
+    }
+
+    .food-text h3 {
+        font-size: 1.1rem;
+        color: #4b143d;
+        margin-bottom: 5px;
+        
+        padding-bottom: 3px;
+         font-family: 'Poppins',cursive;
+    }
+
+    .food-text ul {
+        padding-left: 15px;
+        margin: 0;
+        font-size: 1.2rem;
+        color: #3d0a3d;
+         font-family: 'Poppins',cursive;
+       list-style: none;
+    }
+
+    .food-text li {
+        margin: 3px 0;
+        
+    }
+
+    /* Separator Image Styling */
+    .separator-img {
+        width: 200px;
+        border-radius: 50%;
+        margin: 20px 0;
+        object-fit: cover;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    /* Tablet & Laptop Layout */
+    @media (min-width: 600px) {
+        .food-row {
+            flex-direction: row;
+            align-items: flex-start;
+        }
+        .food-images {
+            flex: 0 0 40%;
+            flex-direction: column;
+            align-items: center;
+        }
+        .food-images img {
+            max-width: 100%;
+        }
+        .food-text {
+            flex: 1;
+        }
+    }
+
+    /* Tablet & Laptop Layout */
+    @media (min-width: 600px) {
+        .food-row {
+            flex-direction: row;
+            align-items: flex-start;
+        }
+        .food-card h2 {
+            font-size: 1.8rem;
+        }
+    }
+</style>
+</head>
+<body>
+  <nav class="navbar">
+    <!-- Logo -->
+    <div class="logo">
+      <img src="images/127652_21325353_3672331_4533acb9_image.jpg" alt="Logo">
+      <div class="logo-text">
+        FUNNER
+        <span>EVENTS</span>
+      </div>
+    </div>
+
+    <!-- Hamburger menu -->
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <!-- Navigation Links -->
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="events.html">Events</a>
+      <a href="about.html" class="active">About Us</a>
+      <a href="vendor.html">Become a Vendor</a>
+      <a href="contact.html">Contact Us</a>
+    </div>
+
+    <!-- Search & User Icon -->
+    <div class="nav-actions">
+      <div class="search-box">
+        <input type="text" placeholder="Search">
+        <i class="fas fa-search"></i>
+      </div>
+       <a href="login.html" class="user-icon">
+        <i class="fas fa-user-circle"></i>
+      </a>
+    </div>
+  </nav>
+     <h2 style="color: #3d0a3d;text-align: center;font-family: 'Poppins',cursive; font-size: 36px;">Vegetarian Dishes</h2>
+<div class="food-container">
+<div class="food-card">
+    <h2>Breakfast</h2>
+
+    <div class="food-section">
+        <div class="food-row">
+            <img src="images/idly.jpeg" alt="Dish 1" class="food-img">
+          
+            <div class="food-text">
+                <h3>Main Dishes</h3>
+                <ul>
+                    <li>Idly - Sambar</li>
+                    <li>Pongal</li>
+                    <li>Uppuma</li>
+                    <li>Puttu Kadalai Kari</li>
+                    <li>Poori Masala </li>
+                     <li>Dosa Varities</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+ <img src="images/poori.jpeg" alt="Special Dish" class="separator-img">
+    <div class="food-section">
+        <div class="food-row">
+            <img src="images/carrot halwa.jpeg" alt="Dish 3" class="food-img">
+            <div class="food-text">
+                <h3>Sweets</h3>
+                <ul>
+                    <li>Pineapple Kesari</li>
+                    <li>Carrot Halwa</li>
+                    <li>Mysore Pak</li>
+                    <li>Jilebi</li>
+                    <li>Laddu Boonthi</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<div class="food-card">
+    <h2>Lunch</h2>
+
+    <div class="food-section">
+        <div class="food-row">
+            <img src="images/buffet.jpeg" alt="Dish 1" style="border-radius: 50%;" class="food-img">
+          
+            <div class="food-text">
+                <h3>Main Dishes</h3>
+                <ul>
+                    <li>Veg Briyani</li>
+                    <li>Rice</li>
+                    <li>Sambar</li>
+                    <li>Vathal Kulambu</li>
+                    <li>Rasam </li>
+                     <li>Curd</li>
+                     <li>2 Poriyal</li>
+                     <li>Pickle</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+ <img src="images/1_1Q0MNQHGnoTE4mtWT8w6DA@2x(1).jpg" alt="Special Dish" class="separator-img">
+    <div class="food-section">
+        <div class="food-row">
+            <img src="images/Pineapple_Kesari_Bhath_400.jpg" alt="Dish 3" class="food-img">
+            <div class="food-text">
+                <h3>Sweets</h3>
+                <ul>
+                    <li>Pineapple Kesari</li>
+                    <li>Carrot Halwa</li>
+                    <li>Mysore Pak</li>
+                    <li>Jilebi</li>
+                    <li>Laddu Boonthi</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</div>
+</div>
+<div class="food-container">
+
+<div class="food-card">
+    <h2>Lunch</h2>
+
+    <div class="food-section">
+        <div class="food-row">
+            <img src="images/477486f48831cbea4c5298347513e033.jpg" alt="Dish 1" class="food-img">
+          
+            <div class="food-text">
+                <h3>Main Dishes</h3>
+                <ul>
+                    <li>Parrota or Chilli Parrota</li>
+                    <li>Veg Kuruma</li>
+                    <li>Idiyappam Kari</li>
+                    <li>Chappathi Gravy</li>
+                    <li>Mini Idly-Sambar </li>
+                     <li>Curd Rice</li>
+                     <li>Uthappam</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+ <img src="images/mini-idly.jpeg" alt="Special Dish" class="separator-img">
+    <div class="food-section">
+        <div class="food-row">
+            <img src="images/gulab-jamun.jpg" alt="Dish 3" class="food-img">
+            <div class="food-text">
+                <h3>Sweets</h3>
+                <ul>
+                    
+                    <li>Mysore Pak</li>
+                    <li>Gulab Jamun</li>
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<div class="food-card">
+    <h2>Middle Snacks & Drinks</h2>
+
+    <div class="food-section">
+        <div class="food-row">
+            <img src="images/images (2).jfif" alt="Dish 1" class="food-img">
+          
+            <div class="food-text">
+                <h3>Drinks</h3>
+                <ul>
+                    <li>Masala Tea</li>
+                    <li>Filter Coffee</li>
+                    <li>Badam Milk</li>
+                    <li>Juices</li>
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+   
+ 
+    <div class="food-section" style="margin-top: 200px;">
+        <div class="food-row">
+            <img src="images/gulab-jamun.jpg" alt="Dish 3" class="food-img">
+            <div class="food-text">
+                <h3>Snacks</h3>
+                <ul>
+                    
+                    <li>Masal Bonda</li>
+                    <li>Cakes</li>
+                    <li>Biscuits</li>
+                    <li>Bajji</li>
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</div>
+</div>
+<footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-logo">
+      <img src="images/127652_21325353_3672331_4533acb9_image.jpg" alt="Funner Events Logo">
+    </div>
+
+    <div class="footer-links">
+      <ul>
+        <li>Home</li>
+        <li>Events</li>
+        <li>Become a Vector</li>
+        <li>About Us</li>
+        <li>Contact Us</li>
+      </ul>
+    </div>
+
+    <div class="footer-services">
+      <ul>
+        <li>Our Services</li>
+        <li>Wedding Events</li>
+        <li>Corporate Events</li>
+        <li>Entertainment Events</li>
+        <li>Sports Events</li>
+        <li>All Type Of Family Events</li>
+      </ul>
+    </div>
+<div class="footer-img">
+  <img src="images/25ff8f45e3721afaab7c15cc79e74742(1).jpg" alt="Event Image" > </div>
+    <div class="footer-contact">
+      
+      <p><strong>Contact:</strong></p>
+       <div class="icons">
+      <p> <i class="fas fa-map-marker-alt location-icon"></i> 21, Amman Nagar,<br>RMK Road, Karur-26</p>
+      <p><i class="fas fa-phone"></i> Phone: +921556214566</p>
+      <p><i class="fas fa-envelope"></i> E-mail: Funnerevent.in</p>
+      </div>
+      <p><strong>Get in Touch</strong></p>
+           <div class="social-icons">
+        <img src="images/whatsapp.jpeg" alt="WhatsApp">
+        <img src="images/youtube.jpeg" alt="YouTube">
+        <img src="images/instagram.jpeg" alt="Instagram">
+        <img src="images/facebook.png" alt="Facebook">
+      </div>
+    
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

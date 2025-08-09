@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Gallery</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+ body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #fff;
+}
+
+.gallery-title {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 2rem;
+  color: #5c1d53;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-auto-rows: 200px;
+  gap: 10px;
+  padding: 10px;
+}
+
+.item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.item:hover img {
+  transform: scale(1.05);
+}
+
+/* Span helpers */
+.span2rows {
+  grid-row: span 2;
+}
+
+.span2cols {
+  grid-column: span 2;
+}
+
+/* Responsive tweaks */
+@media (max-width: 1024px) {
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .span2rows, .span2cols {
+    grid-row: span 1;
+    grid-column: span 1;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .gallery {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    grid-auto-rows: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery {
+    grid-template-columns: 1fr;
+    grid-auto-rows: 200px;
+  }
+  .tall, .wide {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+}
+
+  </style>
+</head>
+<body>
+
+  <h1 class="gallery-title">Legacy Of Memorable Moments</h1>
+   <div class="gallery">
+    <!-- Column 1 big tall image -->
+    <div class="item tall span2rows">
+      <img src="images/c448e921ab604a042908af69124c4c9e.jpg" alt="Hot Air Balloons">
+    </div>
+
+    <!-- Row 1 small images -->
+    <div class="item">
+      <img src="images/d172f9a2-1b8f-4bd5-b9b3-df9071817bd6.jpg" alt="Wedding Decor">
+    </div>
+    <div class="item">
+      <img src="images/Corporate-Party.jpg" alt="Beach Wedding">
+    </div>
+    <div class="item tall span2rows">
+      <img src="images/images (1).jfif" alt="Temple">
+    </div>
+
+    <!-- Row 2 -->
+    <div class="item">
+      <img src="images/party.jpg" alt="Party">
+    </div>
+    <div class="item">
+      <img src="images/Corporate-Company-visits-at-sunnys-world-Pune-2.jpg" alt="Conference">
+    </div>
+    <div class="item">
+      <img src="images/soccer.jpeg" alt="Football Event">
+    </div>
+
+    <!-- Row 3 wide birthday -->
+    <div class="item wide span2cols">
+      <img src="mages/birthday-party-decorations-8.jpg" alt="Birthday Event">
+    </div>
+  </div>
+
+
+
+
+</body>
+</html>
